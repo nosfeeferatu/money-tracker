@@ -4,8 +4,8 @@ function App() {
   return (
     <main>
       <section id='hero'>
-        <h1>What's in our Wallets Now?</h1>
-        <p className='tagline'>Track your spending and income</p>
+        <h1>What's in our Wallets?</h1>
+        <p className='tagline'>Track your spending and income.</p>
       </section>
 
       <section id='inputTransaction'>
@@ -28,7 +28,7 @@ function App() {
             <p>That Masala Dosa was so good.</p>
           </div>
           <div className='right'>
-            <h3>₹60</h3>
+            <h3 className='expense'>₹60</h3>
             <p>28-09-2023 8:14</p>
           </div>
         </div>
@@ -39,7 +39,7 @@ function App() {
             <p>A break from work.</p>
           </div>
           <div className='right'>
-            <h3>₹10</h3>
+            <h3 className='expense'>₹10</h3>
             <p>28-09-2023 10:57</p>
           </div>
         </div>
@@ -50,7 +50,7 @@ function App() {
             <p>What Alex owed me.</p>
           </div>
           <div className='right'>
-            <h3>₹500</h3>
+            <h3 className='income'>₹500</h3>
             <p>28-09-2023 16:23</p>
           </div>
         </div>

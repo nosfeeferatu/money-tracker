@@ -39,19 +39,29 @@ h1 {
 }
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   padding-bottom: 0.5rem;
 }
 
-input, textarea {
-  width: 100%!important;
+h2 span {
+  font-size: 2.4rem;
+  float: right;
+  margin-top: -0.5rem;
+}
+
+input, textarea, select {
+  width: 100%;
   background: #141414;
   color: #777;
   border-radius: 5px;
   padding: 0.5rem;
 }
 
-textarea:focus, input:focus {
+select {
+  width: calc(100% + 1rem)
+}
+
+textarea:focus, input:focus, select:focus {
   color: #f9f7f7;
 }
 
@@ -66,6 +76,7 @@ button {
 
 .basics, .description {
   display: flex;
+  clear: right;
   gap: 0.3rem;
   margin-bottom: 0.3rem;
 }

@@ -4,8 +4,15 @@ import './App.css';
 function App() {
 
   const [title, setTitle] = useState('');
+  const [type, setType] = useState('expense');
+  const [price, setPrice] = useState();
   const [date, setDate] = useState('');
   const [desc, setDesc] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+  }
 
   return (
     <main>
@@ -15,8 +22,15 @@ function App() {
       </section>
 
       <section id='inputTransaction'>
-        <h2>₹500</h2>
-        <form>
+        <h2>Balance:<span>₹500</span></h2>
+        <form onSubmit={handleSubmit}>
+          <div className='basics'>
+            <input type='number' min={1} value={price} onChange={e => setPrice(e.target.value)} placeholder='Price'/>
+            <select name='type' onChange={e => setType(e.target.value)}>
+              <option value='expense'>Expense</option>
+              <option value='income'>Income</option>
+            </select>
+          </div>
           <div className='basics'>
             <input type='text' value={title} onChange={e => setTitle(e.target.value)} placeholder='Dinner?' />
             <input value={date} onChange={e => setDate(e.target.value)} type='datetime-local'/>
@@ -25,7 +39,7 @@ function App() {
             <textarea onChange={e => setDesc(e.target.value)} placeholder='Description'>{desc}</textarea>
           </div>
           <div>
-            <button>Add Transaction</button>
+            <button type='submit'>Add Transaction</button>
           </div>
         </form>
       </section>

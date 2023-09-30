@@ -1,6 +1,12 @@
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+
+  const [title, setTitle] = useState('');
+  const [date, setDate] = useState('');
+  const [desc, setDesc] = useState('');
+
   return (
     <main>
       <section id='hero'>
@@ -12,11 +18,11 @@ function App() {
         <h2>₹500</h2>
         <form>
           <div className='basics'>
-            <input type='text' placeholder='Dinner?' />
-            <input type='datetime-local'/>
+            <input type='text' value={title} onChange={e => setTitle(e.target.value)} placeholder='Dinner?' />
+            <input value={date} onChange={e => setDate(e.target.value)} type='datetime-local'/>
           </div>
           <div className='description'>
-            <textarea placeholder='Description'></textarea>
+            <textarea onChange={e => setDesc(e.target.value)} placeholder='Description'>{desc}</textarea>
           </div>
           <div>
             <button>Add Transaction</button>

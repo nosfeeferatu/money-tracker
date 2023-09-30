@@ -18,6 +18,9 @@ function App() {
           <div className='description'>
             <textarea placeholder='Description'></textarea>
           </div>
+          <div>
+            <button>Add Transaction</button>
+          </div>
         </form>
       </section>
 

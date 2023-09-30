@@ -2,7 +2,8 @@ main {
   box-sizing: border-box;
   background-color: #141414;
   color:rgb(229, 231, 233);
-  padding: 50px;
+  padding: 60px;
+  padding-top: 30px;
 }
 
 * {
@@ -52,6 +53,15 @@ input, textarea {
 
 textarea:focus, input:focus {
   color: #f9f7f7;
+}
+
+button {
+  width: 100%;
+  padding: 0.5rem;
+  font-weight: 600;
+  background-color: #104053;
+  color: #c0bfbf;
+  border-radius: 5px;
 }
 
 .basics, .description {
